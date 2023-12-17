@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael Cancel</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color:blue;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            background-color: blue;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="loadContent('home')">Home</a></li>
+            <li><a href="#" onclick="loadContent('sports')">Sports</a></li>
+            <li><a href="#" onclick="loadContent('family')">Family</a></li>
+            <li><a href="#" onclick="loadContent('kids')">Kids</a></li>
+            <li><a href="#" onclick="loadContent('food')">Food</a></li>
+            <li><a href="#" onclick="loadContent('health')">Health</a></li>
+            <li><a href="#" onclick="loadContent('movies')">Movies</a></li>
+        </ul>
+    </nav>
+
+    <section id="content">
+        
+    </section>
+
+    <script>
+        function loadContent(category) {
+           
+            let content = getCategoryContent(category);
+
+        
+            document.getElementById('content').innerHTML = content;
+        }
+
+        function getCategoryContent(category) {
+        
+            switch (category) {
+                case 'home':
+                    return ' <h2>Home</h2><img src="Home Page.jpg" alt="Gojo"><p>This is my home page for my final exam please feel free to explore the other links. I enjoyed this class a lot especially becuase of the on hands learning we have done its been an honor learning from you professor</p>';
+                case 'sports':
+                    return '<h2>Sports</h2><img src="Sports-image.jpg" alt="Sports Image"><p>Sports play a crucial role in promoting physical fitness and well-being. Engaging in sports activities helps improve cardiovascular health, build strength, and enhance overall endurance. Beyond the physical benefits, sports contribute to the development of essential life skills such as teamwork, discipline, and resilience. Additionally, sports provide a platform for social interaction, fostering camaraderie and creating a sense of community among participants.</p>';
+                case 'family':
+                    return '<h2>Family</h2><img src="Family Picture.jpg" alt="Family Image"><p>Your family plays a big role in who you are they are there for you whenever you need them. Family is over everything as they would do anything for you.</p>';
+                case 'kids':
+                    return '<h2>Kids</h2><img src="Kids Picture.jpg" alt="Kids Image"><p>Children are the embodiment of curiosity and boundless potential. Their innate sense of wonder drives them to explore, learn, and discover the world around them. Providing a nurturing environment and guidance is essential to fostering their creativity, instilling values, and shaping the future leaders of tomorrow.</p>';
+                case 'food':
+                    return '<h2>Food</h2><img src="Food Picture.jpg" alt="Food Image"><p>Food fuels our bodies, providing the energy and nutrients we need for daily activities. Enjoying a variety of foods in moderation is essential for maintaining a balanced and healthy diet. </p>';
+                case 'health':
+                    return '<h2>Health</h2><img src="Health Picture.png" alt="Health Image"><p>Health is a state of complete physical, mental and social well-being and not merely the absence of disease or infirmity. The enjoyment of the highest attainable standard of health is one of the fundamental rights of every human being without distinction of race, religion, political belief, economic or social condition.</p>';
+                case 'movies':
+                    return '<h2>Movies</h2><img src="Movies Picture.jpg" alt="Movies Image"><p>Movies a form of entertainment that enacts a story by sound and a sequence of images giving the illusion of continuous movement. “they went to a movie every Saturday night” synonyms: film, flick, motion picture, motion-picture show, moving picture, moving-picture show, pic, picture, picture show.</p>';
+                default:
+                    return '<p>Content not available.</p>';
+            }
+        }
+    </script>
+</body>
+</html>
